@@ -13,6 +13,30 @@ import java.util.regex.Pattern;
 
 public class BankAccount {
 
+    int balance;  // balance of bank account
+    String accNo;  // Name of bank account
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public String getAccNo() {
+        return accNo;
+    }
+
+    public void setAccNo(String accNo) {
+        this.accNo = accNo;
+    }
+
+    public BankAccount(String accNo, int balance) {
+        this.balance = balance;
+        this.accNo = accNo;
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Bank of Students, by the Students, for the Students!");
         System.out.println(" ");
