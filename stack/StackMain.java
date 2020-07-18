@@ -24,16 +24,16 @@ public class StackMain {
         BankAccount bankAccount4 = new BankAccount("Test4", 4444);
         BankAccount bankAccount5 = new BankAccount("Test5", 5555);
         // Adding account to array
-        //test.push(bankAccount1);
+        test.push(bankAccount1);
         System.out.println("Is empty " + test.isEmpty());
         System.out.println("Size: " + test.size());
         // test.push(bankAccount1);
         System.out.println("Size: " + test.size());
         System.out.println("Is empty " + test.isEmpty());
-        //test.push(bankAccount2);
-        // test.push(bankAccount3);
-        // test.push(bankAccount4);
-        // test.push(bankAccount5);
+        test.push(bankAccount2);
+         test.push(bankAccount3);
+         test.push(bankAccount4);
+         test.push(bankAccount5);
         // Checking amount of accounts
         System.out.println("Size: " + test.size());
         // Checking peek method
