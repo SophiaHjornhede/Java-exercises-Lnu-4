@@ -1,7 +1,7 @@
 package polygons;
 
 /**
- * Assignment-4, exercise-
+ * Assignment-4, exercise-3
  *
  * @author Sophia Hjörnhede
  * @version 1.10 11 July 2020

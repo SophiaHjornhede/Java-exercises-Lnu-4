@@ -94,7 +94,7 @@ public class BankAccount {
         balance = s.nextInt();
         try {
             if(balance>999){
-                System.out.println("Congratulations, your account has been create successfully! ");
+                System.out.println("Congratulations, your account has been created successfully! ");
                 return;
             };
         } catch (Exception e) {

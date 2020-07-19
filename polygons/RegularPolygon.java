@@ -2,7 +2,6 @@ package polygons;
 
 public interface RegularPolygon {
 
-
     int getNumSides();
 
     double getSideLength();
@@ -14,7 +13,6 @@ public interface RegularPolygon {
     default double getInteriorAngle() {
         double n= getNumSides();
         return (n-2)*180;
-
     }
 
     static int totalSides(RegularPolygon[] regularPolygon) {
@@ -24,7 +22,6 @@ public interface RegularPolygon {
                 sumOfSides += regularPolygon[i].getNumSides();
             }
         }
-
         return sumOfSides;
     }
 }

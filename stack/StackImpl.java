@@ -20,7 +20,6 @@ public class StackImpl implements Stack {
     public StackImpl() {
     }
 
-
     @Override
     public int size() {
         // Checking array for amount of non null elements
@@ -42,7 +41,6 @@ public class StackImpl implements Stack {
     public void push(BankAccount account) {
         // if the array is full, make a bigger one and replace the old one
         if (bankAccounts[bankAccounts.length - 1] != null) {
-            System.out.println("Creating larger array");
             // Making bigger array
             bankAccounts = makeArrayBigger(bankAccounts);
         }
@@ -57,19 +55,18 @@ public class StackImpl implements Stack {
     }
 
     private BankAccount[] makeArrayBigger(BankAccount[] bankAccounts) {
-        // Making a new account array with 2 more elements
-        return Arrays.copyOf(bankAccounts, bankAccounts.length + 2);
+        // Making a new account array 2 times bigger
+        return Arrays.copyOf(bankAccounts, bankAccounts.length * 2);
     }
 
     @Override
     public BankAccount pop() {
         // Checking if array is empty
 
-        //  if (isEmpty()) {
-        //      System.out.println("Error Null pointer exception- No accounts in array");
-
-        //      throw new NullPointerException();
-        // }
+        if (isEmpty()) {
+              System.out.println("Error! There is no account in the stack! (Null pointer exception)");
+              //throw new NullPointerException();
+         }
         try{
             int i = bankAccounts.length - 1;
             BankAccount baTemp;  // temporary bank account
@@ -86,7 +83,7 @@ public class StackImpl implements Stack {
         }catch (Exception ignored){
         }
         finally {
-            return new BankAccount("Error reading ID",0);
+            return new BankAccount("The account at the top is removed.",0);
         }
     }
 
@@ -96,11 +93,10 @@ public class StackImpl implements Stack {
         // This way avoids throwing an actual exception and just returns a default element
         // called error if the array is empty.
         if (isEmpty()) {
-            System.out.println("Error Null pointer exception- No accounts in array");
+            System.out.println("Error! There is no account in the stack! (Null pointer exception)");
             BankAccount bankAccount=new BankAccount("Error",0);
             return bankAccount;
             //throw new NullPointerException();
-
         }
 
         int i = bankAccounts.length - 1;
