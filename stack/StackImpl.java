@@ -2,13 +2,11 @@ package stack;
 
 import bankAccount.BankAccount;
 
-
-
 /**
  * Assignment-4, exercise-2
  *
  * @author Sophia Hjörnhede
- * @version 1.10 11 July 2020
+ * @version 1.11 10 Aug 2020
  */
 
 import java.util.Arrays;
@@ -64,8 +62,8 @@ public class StackImpl implements Stack {
         // Checking if array is empty
 
         if (isEmpty()) {
-              System.out.println("Error! There is no account in the stack! (Null pointer exception)");
-              //throw new NullPointerException();
+              //System.out.println("Error! There is no account in the stack! (Null pointer exception)");
+              throw new ArrayIndexOutOfBoundsException();
          }
         try{
             int i = bankAccounts.length - 1;
@@ -95,8 +93,9 @@ public class StackImpl implements Stack {
         if (isEmpty()) {
             System.out.println("Error! There is no account in the stack! (Null pointer exception)");
             BankAccount bankAccount=new BankAccount("Error",0);
-            return bankAccount;
-            //throw new NullPointerException();
+            throw new ArrayIndexOutOfBoundsException();
+            //return bankAccount;
+
         }
 
         int i = bankAccounts.length - 1;
